@@ -40,6 +40,10 @@ players.forEach(player => {
             if (otherPlayers !== player) {
                 otherPlayers.style.display = "none"
             }
+
+            if (player === otherPlayers) {
+                otherPlayers.setAttribute('disabled', true)
+            }
         })
     })
 });
@@ -84,10 +88,11 @@ function validar(player) {
 }
 
 
-newGame.addEventListener("click", () =>{
+newGame.addEventListener("click", () => {
     cargar();
     players.forEach(player => {
         player.style.display = "flex";
+        player.removeAttribute('disabled')
     });
     newGame.style.display = "none";
     text.textContent = "";

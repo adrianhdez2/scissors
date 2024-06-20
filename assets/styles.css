@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -16,7 +16,7 @@ body{
     position: relative;
 }
 
-.container{
+.container {
     width: 100%;
     height: 80%;
     display: flex;
@@ -25,7 +25,7 @@ body{
     flex-direction: column;
 }
 
-.container__game{
+.container__game {
     width: 100%;
     height: 100%;
     display: flex;
@@ -33,8 +33,8 @@ body{
     justify-content: center;
 }
 
-.player1, 
-.player2{
+.player1,
+.player2 {
     width: 40%;
     height: 100%;
     display: flex;
@@ -43,7 +43,7 @@ body{
     justify-content: space-evenly;
 }
 
-.item{
+.item {
     width: 150px;
     height: 150px;
     border: 5px solid #022d3d;
@@ -54,12 +54,18 @@ body{
     border-radius: 10px;
 }
 
-.player1 .item:hover, .player1 .item:active{
+.player1 .item:hover,
+.player1 .item:active{
     background-color: #022d3d;
     cursor: pointer;
 }
 
-.vs__players{
+.player1 .item:disabled {
+    background-color: #022d3d;
+    cursor: not-allowed;
+}
+
+.vs__players {
     width: 20%;
     height: 100%;
     display: flex;
@@ -68,46 +74,46 @@ body{
     flex-direction: column;
 }
 
-.vs__players h1{
+.vs__players h1 {
     font-size: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
 }
 
-.text{
+.text {
     width: 100%;
     text-align: center;
 }
 
-.selected{
+.selected {
     transform: scale(1.5);
     transition: all .5s ease;
 }
 
-.rotated{
+.rotated {
     rotate: 90deg;
 }
 
-.inverted{
+.inverted {
     transform: scaleX(-1);
 }
 
-.rotated-inverted{
+.rotated-inverted {
     transform: scaleX(-1);
     rotate: 270deg;
 }
 
-.icon{
+.icon {
     width: 100%;
     height: auto;
 }
 
-.question{
-   width: 60%;
-   height: auto;
+.question {
+    width: 60%;
+    height: auto;
 }
 
-.newGame{
+.newGame {
     position: absolute;
     bottom: 20%;
     padding: 10px;
